@@ -1,4 +1,4 @@
 class Car < ApplicationRecord
   has_many :bookings
-  belongs_to :user, through: :bookings
+  has_many :user, through: :bookings
 end

@@ -1,7 +1,7 @@
 class CarsController < ApplicationController
 before_action :set_car, except:[:index, :new, :create]
   def index
-    @cars = Cars.all
+    @cars = Car.all
   end
 
   def show
@@ -41,7 +41,7 @@ before_action :set_car, except:[:index, :new, :create]
   private
 
   def car_params
-    params.permit(:cars).require(:name, :model, :price)
+    params.require(:car).permit(:name, :description, :price)
   end
 
   def set_car
