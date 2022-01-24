@@ -2,3 +2,10 @@
 <p>Find me in app/views/bookings/show.html.erb</p>
 
 <p>hello</p>
+
+<% @bookings.each do |b|%>
+<br>
+<%= b.user.username %>
+<%= b.date %>
+
+<% end %>
