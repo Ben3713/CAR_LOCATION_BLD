@@ -1,0 +1,9 @@
+<p>Reservation</p>
+
+<%= simple_form_for([@car,@booking]) do |b| %>
+
+  <%= b.input :date %>
+  <%= b.submit %>
+<% end %>
+
+<%= link_to "retour a l'index", cars_path  %>
