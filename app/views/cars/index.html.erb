@@ -1,0 +1,19 @@
+
+<h1><strong>LIST ALL CARS</strong></h1>
+
+
+<% @cars.each do |car| %>
+<br> <%= link_to car_path(car) do %>
+<%= car.name  %>
+<% end %>
+<%= car.price %>
+<%= link_to "Delete #{car.name}",
+            car_path(car),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+<%= link_to "edit", edit_car_path(car) %>
+
+<% end %>
+<br>
+
+ <%= link_to "new car", new_car_path  %>

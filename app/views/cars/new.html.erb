@@ -1,2 +1,15 @@
 <h1>Cars#new</h1>
 <p>Find me in app/views/cars/new.html.erb</p>
+
+
+<%= simple_form_for(@car) do |c| %>
+  <%= c.label :name %>
+  <%= c.text_field :name %>
+  <%= c.label :description %>
+  <%= c.text_field :description %>
+  <%= c.label :price %>
+  <%= c.text_field :price %>
+  <%= c.submit %>
+<% end %>
+
+<%= link_to "retour a l'index", cars_path  %>

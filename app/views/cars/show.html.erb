@@ -1,2 +1,8 @@
-<h1>Cars#show</h1>
-<p>Find me in app/views/cars/show.html.erb</p>
+<h1>Details sur la car</h1>
+
+
+<%= @car.name %>
+<%= @car.description %>
+ <p><%= @car.price %>€</p>
+
+<%= link_to "retour a l'index", cars_path  %>

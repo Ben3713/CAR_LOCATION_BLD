@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Car.destroy_all
+
+car1 = Car.create(name: 'Ferrari', description: 'sa marche fort', price: '150')
+car2 = Car.create(name: 'Lamborghini', description: 'sa marche fort', price: '480')
+car3 = Car.create(name: 'Porshe', description: 'sa marche fort', price: '350')
+car4 = Car.create(name: 'BMW', description: 'sa marche fort', price: '250')
+
+puts " db bien create"
