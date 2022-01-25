@@ -7,11 +7,13 @@
 <%= car.name  %>
 <% end %>
 <%= car.price %>
-<%= link_to "Delete #{car.name}",
+<%= link_to "edit", edit_car_path(car) %>
+<%= link_to "",
             car_path(car),
             method: :delete,
+            class: "fa fa-trash",
             data: { confirm: "Are you sure?" } %>
-<%= link_to "edit", edit_car_path(car) %>
+
 
 <% end %>
 <br>
