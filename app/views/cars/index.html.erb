@@ -3,10 +3,18 @@
 
 
 <% @cars.each do |car| %>
-<br> <%= link_to car_path(car) do %>
-<%= car.name  %>
-<% end %>
-<%= car.price %>
+
+
+
+</div>
+<div class="card-product d-flex m-3 ">
+  <img src="https://picsum.photos/seed/picsum/200/" height="200px"  />
+  <div class="card-product-infos row ">
+  <br> <%= link_to car_path(car) do %>
+    <h2><%= car.name %></h2>
+    <% end %>
+    <p><%= car.description %><strong><p><%= car.price %>€</p></strong> only.</p>
+  </div>
 <%= link_to "edit", edit_car_path(car) %>
 <%= link_to "",
             car_path(car),
@@ -14,8 +22,8 @@
             class: "fa fa-trash",
             data: { confirm: "Are you sure?" } %>
 
-
+</div>
 <% end %>
 <br>
 
- <%= link_to "new car", new_car_path  %>
+ <%= link_to "new car", new_car_path,class:'btn btn-primary m-3'%>

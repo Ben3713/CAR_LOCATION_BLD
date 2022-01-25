@@ -1,9 +1,17 @@
 <h1>Details sur la car</h1>
 
 
-<%= @car.name %>
-<%= @car.description %>
- <p><%= @car.price %>€</p>
 
-<%= link_to "retour a l'index", cars_path  %>
-<%= link_to "booking this car", new_car_booking_path(@car)%>
+
+
+
+<div class="card-product rounded ml-3 ">
+  <img src="https://picsum.photos/seed/picsum/200/" height="200px"  />
+  <div class="card-product-infos">
+    <h2><%= @car.name %></h2>
+    <p><%= @car.description %><strong><p><%= @car.price %>€</p></strong> only.</p>
+  </div>
+</div>
+
+<%= link_to "retour a l'index",cars_path, class:'btn btn-primary'  %>
+<%= link_to "booking this car", new_car_booking_path(@car),class:'btn btn-success'%>
